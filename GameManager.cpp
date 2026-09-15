@@ -1,11 +1,10 @@
 ﻿#include "GameManager.h"
 #include "GameState.h"
-#include "TitleState.h"
-#include <iostream>
+#include "StartupState.h"
 
-GameManager::GameManager() : isRunning(true), gameTime(0.0f)
+GameManager::GameManager(std::unique_ptr<GameState>initialState) : isRunning(true), gameTime(0.0), currentState(std::move(initialState))
 {
-
+	
 }
 
 void GameManager::ChangeState(std::unique_ptr<GameState>newState)

@@ -11,8 +11,11 @@ void InGameState::OnEnter(GameManager* manager)
 
 void InGameState::OnUpdate(GameManager* manager, float deltaTime)
 {
-	(void)_getch();
-	manager->ChangeState(std::make_unique<ResultState>());
+	int i = _getch();
+	if (i == '\r')
+	{
+		manager->ChangeState(std::make_unique<ResultState>());
+	}
 }
 
 void InGameState::OnExit(GameManager* manager)
