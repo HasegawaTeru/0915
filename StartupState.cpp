@@ -8,7 +8,7 @@ void StartupState::OnEnter(GameManager* manager)
 	
 }
 
-void StartupState::Update(GameManager* manager, float deltaTime)
+void StartupState::OnUpdate(GameManager* manager, float deltaTime)
 {
 
 }
