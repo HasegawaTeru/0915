@@ -4,7 +4,7 @@
 
 GameManager::GameManager(std::unique_ptr<GameState>initialState) : isRunning(true), gameTime(0.0), currentState(std::move(initialState))
 {
-	
+	ChangeState(std::make_unique<StartupState>());
 }
 
 void GameManager::ChangeState(std::unique_ptr<GameState>newState)

@@ -10,8 +10,6 @@ GameManager manager;
 
 int main()
 {
-	manager.ChangeState(std::make_unique<StartupState>());
-
 	while (1)
 	{
 		manager.Update(0.0f);
