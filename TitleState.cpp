@@ -1,5 +1,5 @@
-#include "TitleState.h"
 #include <iostream>
+#include "TitleState.h"
 
 void TitleState::OnEnter(GameManager* manager)
 {
@@ -8,7 +8,7 @@ void TitleState::OnEnter(GameManager* manager)
 
 void TitleState::OnUpdate(GameManager* manager, float deltaTime)
 {
-
+	
 }
 
 void TitleState::OnExit(GameManager* manager)
