@@ -124,13 +124,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="InGameState.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainMenuState.cpp" />
+    <ClCompile Include="ResultState.cpp" />
     <ClCompile Include="StartupState.cpp" />
     <ClCompile Include="TitleState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="InGameState.h" />
+    <ClInclude Include="MainMenuState.h" />
+    <ClInclude Include="ResultState.h" />
     <ClInclude Include="TitleState.h" />
     <ClInclude Include="StartupState.h" />
   </ItemGroup>

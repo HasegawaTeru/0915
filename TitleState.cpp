@@ -1,5 +1,6 @@
 #include <iostream>
 #include "TitleState.h"
+#include "conio.h"
 
 void TitleState::OnEnter(GameManager* manager)
 {
@@ -8,6 +9,7 @@ void TitleState::OnEnter(GameManager* manager)
 
 void TitleState::OnUpdate(GameManager* manager, float deltaTime)
 {
+	(void)_getch();
 	
 }
 

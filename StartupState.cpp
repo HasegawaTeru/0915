@@ -5,17 +5,17 @@
 
 void StartupState::OnEnter(GameManager* manager)
 {
-	
+	std::cout << "ゲームの初期化中" << std::endl;
 }
 
 void StartupState::OnUpdate(GameManager* manager, float deltaTime)
 {
-
+	
 }
 
 void StartupState::OnExit(GameManager* manager)
 {
-	std::cout << "タイトル画面を終了" << std::endl;
+	std::cout << "初期化完了" << std::endl;
 }
 
 const std::string StartupState::GetName() const
