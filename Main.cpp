@@ -14,6 +14,6 @@ int main()
 
 	while (1)
 	{
-		manager.Update(0.1f);
+		manager.Update(0.0f);
 	}
 }
