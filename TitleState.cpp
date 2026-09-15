@@ -1,6 +1,7 @@
 #include <iostream>
-#include "TitleState.h"
 #include "conio.h"
+#include "TitleState.h"
+#include "MainMenuState.h"
 
 void TitleState::OnEnter(GameManager* manager)
 {
@@ -10,7 +11,7 @@ void TitleState::OnEnter(GameManager* manager)
 void TitleState::OnUpdate(GameManager* manager, float deltaTime)
 {
 	(void)_getch();
-	
+	manager->ChangeState(std::make_unique<MainMenuState>());
 }
 
 void TitleState::OnExit(GameManager* manager)

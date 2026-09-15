@@ -1,7 +1,8 @@
 #include <iostream>
+#include "conio.h"
 #include "GameManager.h"
 #include "InGameState.h"
-#include "TitleState.h"
+#include "ResultState.h"
 
 void InGameState::OnEnter(GameManager* manager)
 {
@@ -10,12 +11,13 @@ void InGameState::OnEnter(GameManager* manager)
 
 void InGameState::OnUpdate(GameManager* manager, float deltaTime)
 {
-
+	(void)_getch();
+	manager->ChangeState(std::make_unique<ResultState>());
 }
 
 void InGameState::OnExit(GameManager* manager)
 {
-	std::cout << "‰Šú‰»Š®—¹" << std::endl;
+	std::cout << "ƒQ[ƒ€I—¹" << std::endl;
 }
 
 const std::string InGameState::GetName() const

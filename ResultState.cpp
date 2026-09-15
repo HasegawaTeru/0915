@@ -1,21 +1,23 @@
 #include <iostream>
+#include "conio.h"
 #include "GameManager.h"
 #include "ResultState.h"
-#include "TitleState.h"
+#include "MainMenuState.h"
 
 void ResultState::OnEnter(GameManager* manager)
 {
-	std::cout << "ゲームの初期化中" << std::endl;
+	std::cout << "ゲーム結果" << std::endl;
 }
 
 void ResultState::OnUpdate(GameManager* manager, float deltaTime)
 {
-
+	(void)_getch();
+	manager->ChangeState(std::make_unique<MainMenuState>());
 }
 
 void ResultState::OnExit(GameManager* manager)
 {
-	std::cout << "初期化完了" << std::endl;
+	std::cout << "リザルト終了" << std::endl;
 }
 
 const std::string ResultState::GetName() const
