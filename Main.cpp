@@ -6,10 +6,10 @@
 #include "InGameState.h"
 #include "ResultState.h"
 
-GameManager manager;
-
 int main()
 {
+	GameManager manager(std::make_unique<StartupState>());
+
 	while (1)
 	{
 		manager.Update(0.0f);
